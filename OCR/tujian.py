@@ -24,7 +24,8 @@ def base64_api(uname, pwd,  img):
 
 
 if __name__ == "__main__":
-    img_path = "C:/Users/Administrator/Desktop/88.png"
+    #img_path = "C:/Users/Administrator/Desktop/88.png"
+    img_path = "./bdbutton.png"
     img = Image.open(img_path)
     result = base64_api(uname='zoulida', pwd='zoulida', img=img)
     print(result)
