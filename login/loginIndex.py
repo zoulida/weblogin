@@ -303,11 +303,12 @@ def total(driver):
         k = k - 1
         flag = result
 
+    driver.quit()
 # 方法主入口
 if __name__ == '__main__':
     # 加启动配置
-    #driver = openChrome()
-    driver = debugChrome()#这个是调试浏览器
+    driver = openChrome()
+    #driver = debugChrome()#这个是调试浏览器
     #operationAuth(driver)
     #operationGetPicture(driver)
     #login(driver)
