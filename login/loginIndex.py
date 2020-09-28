@@ -304,6 +304,11 @@ def total(driver):
         flag = result
 
     driver.quit()
+
+def mainAPI():
+    driver = openChrome()
+    total(driver)
+
 # 方法主入口
 if __name__ == '__main__':
     # 加启动配置
