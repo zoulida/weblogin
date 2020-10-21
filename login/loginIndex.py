@@ -4,6 +4,13 @@ __author__ = 'zoulida'
 from selenium import webdriver
 from selenium.webdriver.common.desired_capabilities import DesiredCapabilities
 import time
+#解决cmd CMD路径问题，就是将当然执行的路径包加入到sys中去。
+import sys
+import os
+path2 = os.path.abspath('.')
+print(path2)
+sys.path.extend([path2])
+#sys.path.extend(['D:\pythonworkspace\weblogin'])
 
 class alert_is_present(object):
     """ Expect an alert to be present."""
@@ -237,7 +244,7 @@ def selectorOp(driver):
 
     # 下面三种方法用于选择"篮球运动员"
     # selector.select_by_index("2")  # 通过index进行选择,index从0开始
-    selector.select_by_value("16")  # 通过value属性值进行选择
+    selector.select_by_value("1")  # 通过value属性值进行选择
     # selector.select_by_visible_text("篮球运动员")  # 通过标签显示的text进行选择
 
     time.sleep(1)
