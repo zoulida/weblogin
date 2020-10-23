@@ -244,7 +244,8 @@ def selectorOp(driver):
 
     # 下面三种方法用于选择"篮球运动员"
     # selector.select_by_index("2")  # 通过index进行选择,index从0开始
-    selector.select_by_value("1")  # 通过value属性值进行选择
+    # selector.select_by_value("1")  # 通过value属性值进行选择
+    selector.select_by_visible_text("山东省")
     # selector.select_by_visible_text("篮球运动员")  # 通过标签显示的text进行选择
 
     time.sleep(1)
