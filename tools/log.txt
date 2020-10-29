@@ -1,0 +1,5 @@
+2018-07-17 09:25:49,990 - logTest.py - DEBUG - 苍井空         -[logTest.py:6]
+2018-07-17 09:25:49,990 - logTest.py - INFO - 麻生希         -[logTest.py:7]
+2018-07-17 09:25:49,990 - logTest.py - WARNING - 小泽玛利亚         -[logTest.py:8]
+2018-07-17 09:25:49,990 - logTest.py - ERROR - 桃谷绘里香         -[logTest.py:9]
+2018-07-17 09:25:49,991 - logTest.py - CRITICAL - 泷泽萝拉         -[logTest.py:10]

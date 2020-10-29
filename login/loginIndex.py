@@ -12,6 +12,12 @@ print(path2)
 sys.path.extend([path2])
 #sys.path.extend(['D:\pythonworkspace\weblogin'])
 
+import datetime
+from tools.LogTools import Logger
+nowTime = datetime.datetime.now().strftime('%Y-%m-%d_%H-%M-%S')
+logName = 'webLoginlog-' + nowTime + '.txt'
+logger = Logger(logName, logLevel="DEBUG", logger="loginIndex.py").getlog()
+
 class alert_is_present(object):
     """ Expect an alert to be present."""
 
@@ -314,18 +320,33 @@ def total(driver):
     driver.quit()
 
 def mainAPI():
-    driver = openChrome()
-    total(driver)
+    try:
+        driver = openChrome()
+        total(driver)
+    except Exception as e:
+        import traceback
+        #print('traceback.print_exc():', traceback.print_exc())
+        message = traceback.format_exc()
+        #print(message)
+        #print(e.__context__)
+        logger.info(message)
+
+        #message = traceback.format_exc()
+        #print(message)
+
+
+
 
 # 方法主入口
 if __name__ == '__main__':
+    mainAPI()
     # 加启动配置
-    driver = openChrome()
+    #driver = openChrome()
     #driver = debugChrome()#这个是调试浏览器
     #operationAuth(driver)
     #operationGetPicture(driver)
     #login(driver)
-    total(driver)
+    #total(driver)
     #driver.execute_script('window.scrollTo(0,1200);')
     #driver.execute_script('window.scrrollBy(0,400);')
     #submit(driver)
