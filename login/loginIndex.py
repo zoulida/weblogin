@@ -246,6 +246,7 @@ def selectorOp(driver):
 
     from selenium.webdriver.support.select import Select
     # 实例化一个Select类的对象
+    time.sleep(1)
     selector = Select(driver.find_element_by_id("province_id"))
 
     # 下面三种方法用于选择"篮球运动员"
