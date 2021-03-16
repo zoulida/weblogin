@@ -14,7 +14,7 @@ def base64_api(uname, pwd,  img):
         b64 = str(base64.b64encode(buffered.getvalue()), encoding='utf-8')
     else:
         b64 = str(base64.b64encode(buffered.getvalue()))
-    data = {"username": uname, "password": pwd, "image": b64}
+    data = {"username": uname, "password": pwd, "image": b64, "typeid" : 1}
     result = json.loads(requests.post("http://api.ttshitu.com/base64", json=data).text)
     if result['success']:
         return result["data"]["result"]

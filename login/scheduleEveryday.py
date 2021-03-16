@@ -79,7 +79,7 @@ def run():
                 break
 
             nowTime = datetime.datetime.now().strftime('%Y-%m-%d %H:%M:%S')
-            print("Wait for running at ", h, ':', m, " every day. Now time is %s" %nowTime)
+            print("Weblogin, wait for running at ", h, ':', m, " every day. Now time is %s" %nowTime)
 
 
 
